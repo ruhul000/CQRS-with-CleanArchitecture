@@ -45,3 +45,139 @@ Before running the project, ensure you have the following installed:
 2. Set up your database connection string in **appsettings.json** or **appsettings.Development.json** files.
 3. Navigate to the **SqlScript** directory and run **DataBaseScript.sql**, **Sproc.sql**, **Seed.sql**.
 4. Navigate to the **API Projects** directory and run the project accordingly.
+
+#### **PROJECT TREE**
+<pre>
+src
+│   ePos.sln
+│
+├───Product.Command
+│   ├───Application
+│   │   ├───Application.csproj
+│   │   ├───AssemblyReference.cs
+│   │   │
+│   │   ├───Abstractions
+│   │   │   └───Messaging
+│   │   │       ├───ICommand.cs
+│   │   │       └───ICommandHandler.cs
+│   │   └───Products
+│   │       └───Commands
+│   │           └───CreateProduct
+│   │               ├───CreateProductCommand.cs
+│   │               ├───CreateProductCommandHandler.cs
+│   │               ├───CreateProductCommandValidator.cs
+│   │               └───CreateProductRequest.cs
+│   │
+│   ├───Domain
+│   │   ├───Domain.csproj
+│   │   │
+│   │   ├───Abstractions
+│   │   │   ├───IProductCommandRepository.cs
+│   │   │   ├───IProductQueryRepository.cs
+│   │   │   └───IUnitOfWork.cs
+│   │   │
+│   │   ├───Entities
+│   │   │   └───Product.cs
+│   │   │
+│   │   ├───Primitives
+│   │   │   └───Entity.cs
+│   │   │
+│   │   └───Utilities
+│   │       ├───Error.cs
+│   │       └───Result.cs
+│   │
+│   ├───Infrastructure
+│   │   ├───AssemblyReference.cs
+│   │   ├───Infrastructure.csproj
+│   │   ├───ProductReadDbContext.cs
+│   │   ├───ProductWriteDbContext.cs
+│   │   │
+│   │   └───Repositories
+│   │       ├───ProductCommandRepository.cs
+│   │       ├───ProductQueryRepository.cs
+│   │       └───UnitOfWork.cs
+│   │
+│   └───ProductAPI
+│       ├───appsettings.Development.json
+│       ├───appsettings.json
+│       ├───ProductAPI.csproj
+│       ├───ProductAPI.csproj.user
+│       ├───ProductAPI.http
+│       ├───Program.cs
+│       │
+│       ├───Controllers
+│       │   └───ProductController.cs
+│       │
+│       ├───OpenAPI
+│       │   └───ConfigureSwaggerOptions.cs
+│       │
+│       └───Properties
+│           └───launchSettings.json
+│
+└───Product.Query
+    ├───Applcation
+    │   ├───Application.csproj
+    │   ├───AssemblyReference.cs
+    │   │
+    │   ├───Abstractions
+    │   │   └───Messaging
+    │   │    	├───IQuery.cs
+    │   │    	└───IQueryHandler.cs
+    │   │
+    │   └───Products
+    │       └───Queries
+    │           ├───ProductResponse.cs
+    │           │
+    │           ├───GetAllProducts
+    │           │   ├───GetAllProductsQuery.cs
+    │           │   └───GetAllProductsQueryHandler.cs
+    │           │
+    │           ├───GetProductById
+    │           │   ├───GetProductByIdQuery.cs
+    │           │   └───GetProductByIdQueryHandler.cs
+    │           │
+    │           └───GetProductByName
+    │               ├───GetProductByNameQuery.cs
+    │               └───GetProductByNameQueryHandler.cs
+	│
+	├───Domain
+	│   ├───Domain.csproj
+	│   │
+	│   ├───Abstractions
+	│   │   └───IProductQueryRepository.cs
+	│   │
+	│   ├───Entities
+	│   │   └───Product.cs
+	│   │
+	│   ├───Primitives
+	│   │   └───Entity.cs
+	│   │
+	│   └───Utilities
+	│       ├───Error.cs
+	│       └───Result.cs
+    │
+    ├───Infrastructure
+    │   ├───AssemblyReference.cs
+    │   ├───Infrastructure.csproj
+    │   ├───ProductReadDbContext.cs
+    │   │
+    │   └───Repositories
+    │       └───ProductQueryRepository.cs
+    │
+    └───ProductAPI
+        ├───appsettings.Development.json
+        ├───appsettings.json
+        ├───ProductAPI.csproj
+        ├───ProductAPI.csproj.user
+        ├───ProductAPI.http
+        ├───Program.cs
+        │
+        ├───Endpoints
+        │   └───ProductEndpoints.cs
+        │
+        ├───OpenAPI
+        │   └───ConfigureSwaggerOptions.cs
+        │
+        └───Properties
+            └───launchSettings.json
+</pre>
