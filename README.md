@@ -49,7 +49,7 @@ Before running the project, ensure you have the following installed:
 #### **PROJECT TREE**
 <pre>
 src
-│   ePos.sln
+├───ePos.sln
 │
 ├───Product.Command
 │   ├───Application
