@@ -139,22 +139,22 @@ src
     │           └───GetProductByName
     │               ├───GetProductByNameQuery.cs
     │               └───GetProductByNameQueryHandler.cs
-	│
-	├───Domain
-	│   ├───Domain.csproj
-	│   │
-	│   ├───Abstractions
-	│   │   └───IProductQueryRepository.cs
-	│   │
-	│   ├───Entities
-	│   │   └───Product.cs
-	│   │
-	│   ├───Primitives
-	│   │   └───Entity.cs
-	│   │
-	│   └───Utilities
-	│       ├───Error.cs
-	│       └───Result.cs
+    │
+    ├───Domain
+    │   ├───Domain.csproj
+    │   │
+    │   ├───Abstractions
+    │   │   └───IProductQueryRepository.cs
+    │   │
+    │   ├───Entities
+    │   │   └───Product.cs
+    │   │
+    │   ├───Primitives
+    │   │   └───Entity.cs
+    │   │
+    │   └───Utilities
+    │       ├───Error.cs
+    │       └───Result.cs
     │
     ├───Infrastructure
     │   ├───AssemblyReference.cs
